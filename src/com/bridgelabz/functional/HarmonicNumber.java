@@ -1,0 +1,33 @@
+package com.bridgelabz.functional;
+
+import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
+
+/**
+ * purpose: Print the nth harmonic number series 1/1 + 1/2 + .... +1/n
+ * @author Bridgelabz
+ * @version 1.8
+ */
+
+public class HarmonicNumber {
+
+	public static void main(String[] args) {
+	
+		Scanner Sc= new Scanner(System.in);
+		
+		System.out.println("enter the nth value of harmonic series");
+		
+		int n=Sc.nextInt();
+		
+		Utility u= new Utility();
+		
+		/**
+		 * Function to print harmonic number series
+		 * @param n, value of harmonic number
+		 */
+		u.harmonicNumber(n);
+		
+	}
+
+}

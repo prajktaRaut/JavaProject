@@ -119,5 +119,27 @@ public class Utility
 		}
 	}
 
+	public static void harmonicNumber(int n)
+	{
+		
+		// loop execute until value of i is less than or equal to n
+		
+		for(int i=1;i<=n;i++)
+		{
+			if(i==1)
+			{
+				System.out.print("1 + ");
+			}
+			else if(i==n)
+			{
+				System.out.print("1/"+n);
+			}
+			else
+			{
+				System.out.print("1/"+i+" + ");
+			}
+		}
+		
+	}
 	
 }
