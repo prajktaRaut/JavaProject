@@ -100,5 +100,24 @@ public class Utility
 		
 		}
 	
+	public static void powerOf2(int n)
+	{
+		int i=0;
+		int power=1;
+		
+		System.out.println("Table of power 2 that are less than and equal to 2^"+n);
+		
+		// loop run until i value is less than or equal to n value
+		while(i<=n)
+		{
+			
+		System.out.println("2^"+i+" = "+power);
+		
+		power=power*2;
+		i++;
+		
+		}
+	}
+
 	
 }
