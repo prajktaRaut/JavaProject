@@ -2,6 +2,8 @@ package com.bridgelabz.utility;
 
 public class Utility 
 {
+ 
+	
 	public static void Replace(String Name)
 	
 	{
@@ -63,5 +65,40 @@ public class Utility
 		
 	}
 
+	public static void leapYear(int year)
+	{
+		if(year>=1000 && year<=10000)
+		{
+		if(year%4==0)
+		{
+			if(year%100==0)
+			{
+				if(year%400==0)
+				{
+					System.out.println("The given year is leap Year");
+				}
+				else
+				{
+					System.out.println("The given year is not leap year");
+				}
+				
+			}
+			else
+			{
+				System.out.println(" The given year is leap Year");
+			}
+		}
+		else
+		{
+			System.out.println("The given year is not leap year");
+		}
+		}
+		else
+		{
+			System.out.println("enter the proper year");
+		}
+		
+		}
+	
 	
 }
