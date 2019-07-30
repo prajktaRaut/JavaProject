@@ -28,5 +28,40 @@ public class Utility
 		
 	}
 	
+	public static void flipCoin(int flipse)
+	{
+		int head=0, tails=0;
+		int counter=1;
+		double RandomNum = 0.0;
+		
+		// loop run until counter is less than flipse value
+		while(counter<flipse)
+		{
+			RandomNum =	Math.random();
+			
+			if(RandomNum < .5)
+			{
+				head++;
+				
+			}
+			else
+			{
+				tails++;
+				
+			}
+			counter++;
+	
+		}	
+		System.out.println("Total number of head is "+head);
+		
+		System.out.println("Percentage of head is "+(float)((float)head/flipse)*100);
+		 
+		System.out.println("Total number of tails is "+tails);
+		
+		System.out.println("percentage of tails is "+(float)((float)tails/flipse)*100);
+		
+		
+	}
+
 	
 }
