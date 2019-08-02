@@ -73,6 +73,7 @@ public class Utility
 
 	public static void leapYear(int year)
 	{
+		// Here, we check the year is between 1000 and 10000 or not
 		if(year>=1000 && year<=10000)
 		{
 		if(year%4==0)
@@ -151,6 +152,8 @@ public class Utility
 	public static void findTriplet(int[] arr, int n)
 	{
 		boolean found= true;
+		
+		
 		for(int i=0;i<n-2;i++)
 		{
 			for(int j=i+1;j<n-1;j++)
@@ -179,6 +182,16 @@ public class Utility
 			System.out.println("Does not exist");
 		}
 		
+	}
+	
+	
+	public static double calculateDistance(int x,int y)
+	{
+		// Here, we used inbuilt function sqrt to calculate square root of number 
+		
+		double distance=Math.sqrt(x*x + y*y);
+		
+		return distance;
 	}
 	
 }

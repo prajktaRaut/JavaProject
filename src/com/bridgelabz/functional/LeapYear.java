@@ -11,7 +11,7 @@ import com.bridgelabz.utility.Utility;
  *	@version 1.8
  */
 
-public class leapYear {
+public class Leapyear {
 
 	public static void main(String[] args) {
 		
@@ -20,8 +20,6 @@ public class leapYear {
 	System.out.println("enter the year");
 	
 	int year=Sc.nextInt();
-	
-	
 	
 	/**
 	 *  Function to find the given year is leap year or not
