@@ -246,5 +246,35 @@ public class Utility
 		
 	}
 	
+	// Static variable for storing start and end time 
+	
+	static long StartTime;
+	static long StopTime;
+	
+	//Function to get start time
+	
+	public static void StartStopWatch()
+	{
+		 StartTime =  System.currentTimeMillis();
+		
+	}
+	
+	//Function to get stop time 
+	
+	public  static void StopStopWatch()
+	{
+		 StopTime= System.currentTimeMillis();
+		 
+		
+	}
+	
+	// Function to calculate elapsed time between start and stop time and return elapsed time
+	
+	public static double getelapsedtime()
+	{
+		double ElapsedTime=(StopTime-StartTime)/1000;
+		return ElapsedTime;
+	}
+	
 }
 
