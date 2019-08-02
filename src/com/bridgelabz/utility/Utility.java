@@ -229,5 +229,22 @@ public class Utility
 	}
 	
 	
+	public static void calculateWindChill(double temp,double speed)
+	{
+       double Wind;
+		
+		if(temp<50 && (speed>3 || speed<120))
+		{
+		  Wind=35.74+0.6215*temp+(0.42*temp-35.75)*Math.pow(speed, 0.16);
+		  
+		  System.out.println("Wind Chill is "+Wind);
+		}
+		else
+		{
+			System.out.println("Input proper value ");
+		}
+		
+	}
+	
 }
 
