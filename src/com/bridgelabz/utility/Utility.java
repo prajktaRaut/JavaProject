@@ -194,4 +194,40 @@ public class Utility
 		return distance;
 	}
 	
+	
+	public static void quadraticEquation(double a,double b,double c)
+	{
+		double root1, root2;
+		
+		double Determinant = b*b - 4*a*c;
+		
+		//Here, we check determinant value to find root of equation 
+		
+		if(Determinant>0)
+		{
+			root1=(-b - Math.sqrt(Determinant))/2*a;
+			root2=(-b + Math.sqrt(Determinant))/2*a;
+			
+			System.out.println("Root1= "+root1%.2f +"Root2= "+root2%.2f );
+		}
+		
+		if(Determinant==0)
+		{
+			root1=root2=-b/2*a;
+			
+			System.out.println("Root1=Root2= "+root1%.2f);
+		}
+		else
+		{
+			double realpart=-b/2*a;
+			double imaginarypart=Math.sqrt(-Determinant)/2*a;
+			
+			System.out.println("root1= "+realpart+"+"+imaginarypart+"i");
+			System.out.println("root2= "+realpart+"-"+imaginarypart+"i");
+		}
+		
+	}
+	
+	
 }
+
