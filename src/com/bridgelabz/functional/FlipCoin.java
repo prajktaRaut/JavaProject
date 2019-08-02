@@ -2,7 +2,10 @@ package com.bridgelabz.functional;
 
 import java.util.Scanner;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import com.bridgelabz.utility.Utility;
+
 /**
  * purpose: Flip coin and Print percentage of Head and Tails
  * @author Bridgelabz
@@ -15,12 +18,11 @@ public class FlipCoin {
 	public static void main(String[] args) {
 		
 		
-		
-		Scanner Sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
 		
 		System.out.println("enter the number of flipse do you want");
 		
-		int flipse=Sc.nextInt();
+		int flipse=sc.nextInt();
 		
 		/*
 		 * Function to find the percentage of
@@ -30,6 +32,7 @@ public class FlipCoin {
 		
 		Utility.flipCoin(flipse);
 	
+		
 		
 		
 

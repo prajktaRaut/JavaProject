@@ -1,10 +1,16 @@
 package com.bridgelabz.utility;
 
+/**
+ * purpose: Helper class containing important method used in another class  
+ * @author Bridgelabz
+ * @version 1.8
+ */
+
 public class Utility 
 {
  
 	
-	public static void Replace(String Name)
+	public static void replace(String Name)
 	
 	{
 		String str="Hello <<Username>>, How are you?";
@@ -138,6 +144,39 @@ public class Utility
 			{
 				System.out.print("1/"+i+" + ");
 			}
+		}
+		
+	}
+	
+	public static void findTriplet(int[] arr, int n)
+	{
+		boolean found= true;
+		for(int i=0;i<n-2;i++)
+		{
+			for(int j=i+1;j<n-1;j++)
+			{
+				for(int k=j+1;k<n;k++)
+				{
+					if(arr[i]+arr[j]+arr[k]==0)
+					{
+						System.out.print(arr[i]);
+						System.out.print(" ");
+						System.out.print(arr[j]);
+						System.out.print(" ");
+						System.out.print(arr[k]);
+						System.out.print(" ");
+						
+						System.out.println();
+						
+						found=true;
+					}
+				}
+			}
+		}
+		
+		if(found==false)
+		{
+			System.out.println("Does not exist");
 		}
 		
 	}

@@ -16,13 +16,13 @@ public class PowerOf2 {
 		
 		int n=Integer.parseInt(args[0]);
 		
-		Utility u = new Utility();
+		
 		
 		/**
 		 * Function to find the table of power of 2
 		 * @param n, the value for no of times table of power of 2 is printed
 		 */
-		u.powerOf2(n);
+		Utility.powerOf2(n);
 		
 		
 		

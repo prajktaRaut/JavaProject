@@ -10,23 +10,24 @@ import com.bridgelabz.utility.Utility;
  * @version 1.8
  */
 
-public class HarmonicNumber {
+public class Harmonicnumber {
 
 	public static void main(String[] args) {
 	
-		Scanner Sc= new Scanner(System.in);
+		Scanner sc= new Scanner(System.in);
 		
 		System.out.println("enter the nth value of harmonic series");
 		
-		int n=Sc.nextInt();
+		int n=sc.nextInt();
 		
-		Utility u= new Utility();
+		
 		
 		/**
 		 * Function to print harmonic number series
 		 * @param n, value of harmonic number
 		 */
-		u.harmonicNumber(n);
+		
+		Utility.harmonicNumber(n);
 		
 	}
 

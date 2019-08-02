@@ -3,6 +3,7 @@ package com.bridgelabz.functional;
 import java.util.Scanner;
 
 import com.bridgelabz.utility.Utility;
+
 /**
  * purpose: Replace given string with proper name
  * @author Bridgelabz
@@ -12,17 +13,16 @@ public class ReplaceString {
 
 	public static void main(String[] args) {
 		
-		Scanner Sc= new Scanner(System.in);
+		Scanner sc= new Scanner(System.in);
 		
 		System.out.println("enter the username");
 		
-		String Name=Sc.nextLine();
+		String Name=sc.nextLine();
 		
-		Utility u= new Utility();
 		
 		// Here, Replace() is a userdefined function to replace the given string
 		
-		u.Replace(Name);
+		Utility.replace(Name);
 		
 	}
 
