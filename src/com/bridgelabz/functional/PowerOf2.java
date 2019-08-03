@@ -16,12 +16,6 @@ public class PowerOf2 {
 		
 		int n=Integer.parseInt(args[0]);
 		
-		
-		
-		/**
-		 * Function to find the table of power of 2
-		 * @param n, the value for no of times table of power of 2 is printed
-		 */
 		Utility.powerOf2(n);
 		
 		

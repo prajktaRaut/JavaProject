@@ -17,13 +17,7 @@ public class Distance
 
 
 		int x = Integer.parseInt(args[0]);
-		int y = Integer.parseInt(args[1]);
-		
-		/**
-		 *  Function to calculate distance between x and y
-		 *  @param x & y is the value of two point
-		 */
-		
+		int y = Integer.parseInt(args[1]);		
 		
 		double result=Utility.calculateDistance(x, y);
 		

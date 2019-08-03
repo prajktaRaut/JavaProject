@@ -19,14 +19,7 @@ public class Harmonicnumber {
 		System.out.println("enter the nth value of harmonic series");
 		
 		int n=sc.nextInt();
-		
-		
-		
-		/**
-		 * Function to print harmonic number series
-		 * @param n, value of harmonic number
-		 */
-		
+				
 		Utility.harmonicNumber(n);
 		
 	}

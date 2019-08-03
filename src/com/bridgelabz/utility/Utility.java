@@ -1,5 +1,7 @@
 package com.bridgelabz.utility;
 
+import java.util.Scanner;
+
 /**
  * purpose: Helper class containing important method used in another class  
  * @author Bridgelabz
@@ -8,7 +10,49 @@ package com.bridgelabz.utility;
 
 public class Utility 
 {
- 
+	
+	static Scanner scanner= new Scanner(System.in);
+	
+	
+	public static int integerValue()
+	{
+		int integer= scanner.nextInt();
+		return integer;
+	}
+	
+	
+	public static String stringValue()
+	{
+		String string = scanner.nextLine();
+		return string;
+	}
+
+	
+	public static char characterValue()
+	{
+		char character= scanner.next().charAt(0);
+		return character;
+	}
+
+	
+	public static float floatValue()
+	{
+		float floatvalue= scanner.nextInt();
+		return floatvalue;
+	}
+
+	
+	public static double doubleValue()
+	{
+		double doublevalue= scanner.nextInt();
+		return doublevalue;
+	}
+	
+	
+	/**
+	 * Function for replace string with username 
+	 * @param Name, string for replace
+	 */
 	
 	public static void replace(String Name)
 	
@@ -32,10 +76,15 @@ public class Utility
 		System.out.println("Username has minimum 3 character");
 		
 		}
-		
-		
+			
 	}
 	
+	
+	/**
+	 * Function to find the percenatge of head and tail
+	 * @param flipse, the value for no of times flipse
+	 */
+
 	public static void flipCoin(int flipse)
 	{
 		int head=0, tails=0;
@@ -67,12 +116,18 @@ public class Utility
 		System.out.println("Total number of tails is "+tails);
 		
 		System.out.println("percentage of tails is "+(float)((float)tails/flipse)*100);
-		
-		
+			
 	}
+	
 
+	/**
+	 *  Function to find the given year is leap year or not
+	 *  @param year, the value of year to check
+	 */
+	
 	public static void leapYear(int year)
 	{
+		
 		// Here, we check the year is between 1000 and 10000 or not
 		if(year>=1000 && year<=10000)
 		{
@@ -107,6 +162,12 @@ public class Utility
 		
 		}
 	
+	
+	/**
+	 * Function to find the table of power of 2
+	 * @param n, the value for no of times table of power of 2 is printed
+	 */
+	
 	public static void powerOf2(int n)
 	{
 		int i=0;
@@ -125,6 +186,12 @@ public class Utility
 		
 		}
 	}
+
+	
+	/**
+	 * Function to print harmonic number series
+	 * @param n, value of nth harmonic number series
+	 */
 
 	public static void harmonicNumber(int n)
 	{
@@ -149,10 +216,16 @@ public class Utility
 		
 	}
 	
+	
+	/**
+	 * Function to find the three element whose sum is equal to zero
+	 * @param arr, an array of integer
+	 * @param n, length of the array
+	 */
+	
 	public static void findTriplet(int[] arr, int n)
 	{
 		boolean found= true;
-		
 		
 		for(int i=0;i<n-2;i++)
 		{
@@ -185,6 +258,13 @@ public class Utility
 	}
 	
 	
+	/**
+	 * Function to calculate distance between starting and end point
+	 * @param x, starting point
+	 * @param y, end point
+	 * @return distance value
+	 */
+	
 	public static double calculateDistance(int x,int y)
 	{
 		// Here, we used inbuilt function sqrt to calculate square root of number 
@@ -194,6 +274,63 @@ public class Utility
 		return distance;
 	}
 	
+
+	/**
+	 * Permutation function
+	 * @param str string to calculate permutation
+	 * @param s starting index
+	 * @param e end index
+	 */
+	
+	public static void FindPermutation(String str,int s, int e)
+	{
+		if(s==e)
+		{
+			System.out.println(str);
+		}
+		else
+		{
+			for(int i=s;i<=e;i++)
+			{
+				str=swap(str,s,i);
+				FindPermutation(str, s+1, e);
+				str=swap(str,s,i);
+				
+			}
+		}	
+		
+	}
+	
+
+	/**
+	 * Swap character at position 
+	 * @param str string value
+	 * @param i position 1
+	 * @param j position 2
+	 * @return swapped string
+	 */
+	
+	public static String swap(String str, int i,int j)
+	{
+		char temp;
+		
+		char[] tempArray=str.toCharArray();
+		
+		temp=tempArray[i];
+		tempArray[i]=tempArray[j];
+		tempArray[j]=temp;
+		
+		return String.valueOf(tempArray);
+		
+	}
+	
+	
+	/**
+	 * Function to find the root of the equation and print it
+	 * @param a value of a in qudratic equation a*x*x + b*x + c
+	 * @param b value of b in qudratic equation a*x*x + b*x + c
+	 * @param c value of c in qudratic equation a*x*x + b*x + c
+	 */
 	
 	public static void quadraticEquation(double a,double b,double c)
 	{
@@ -229,6 +366,12 @@ public class Utility
 	}
 	
 	
+	/**
+	 * Function to calculate Windchill
+	 * @param temp double value of temprature in fahrenhite
+	 * @param speed double value of Windspeed in milies per second
+	 */
+	
 	public static void calculateWindChill(double temp,double speed)
 	{
        double Wind;
@@ -246,12 +389,17 @@ public class Utility
 		
 	}
 	
-	// Static variable for storing start and end time 
+	/**
+	 *  Static variable for storing start and end time 
+	 */
 	
 	static long StartTime;
 	static long StopTime;
 	
-	//Function to get start time
+	
+	/**
+	 * Function to get start time
+	 */
 	
 	public static void StartStopWatch()
 	{
@@ -259,17 +407,23 @@ public class Utility
 		
 	}
 	
-	//Function to get stop time 
 	
-	public  static void StopStopWatch()
+	/**
+	 * Function to get stop time 
+	 */
+		public  static void StopStopWatch()
 	{
 		 StopTime= System.currentTimeMillis();
 		 
 		
 	}
 	
-	// Function to calculate elapsed time between start and stop time and return elapsed time
-	
+		
+	/**
+	 * Function to calculate elapsed time between start and stop time
+	 * @return elapsed time
+	 */
+	 
 	public static double getelapsedtime()
 	{
 		double ElapsedTime=(StopTime-StartTime)/1000;

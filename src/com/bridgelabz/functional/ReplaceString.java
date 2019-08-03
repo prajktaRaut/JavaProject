@@ -19,9 +19,7 @@ public class ReplaceString {
 		
 		String Name=sc.nextLine();
 		
-		
-		// Here, Replace() is a userdefined function to replace the given string
-		
+
 		Utility.replace(Name);
 		
 	}

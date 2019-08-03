@@ -24,12 +24,6 @@ public class FlipCoin {
 		
 		int flipse=sc.nextInt();
 		
-		/*
-		 * Function to find the percentage of
-		 * 		Head and Tails
-		 * @param flipse, the value for number of times flip
-		 */
-		
 		Utility.flipCoin(flipse);
 	
 		

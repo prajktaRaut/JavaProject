@@ -26,14 +26,6 @@ public class Quadratic {
 		double c=sc.nextDouble();
 		
 		
-		
-		/**
-		 * Function to find the root of the equation and print it
-		 * @param a value of a in qudratic equation a*x*x + b*x c
-		 * @param b value of b in qudratic equation a*x*x + b*x c
-		 * @param c value of c in qudratic equation a*x*x + b*x c
-		 */
-		
 		Utility.quadraticEquation(a, b, c);
 		
 	}

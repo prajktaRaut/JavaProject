@@ -21,11 +21,6 @@ public class Leapyear {
 	
 	int year=Sc.nextInt();
 	
-	/**
-	 *  Function to find the given year is leap year or not
-	 *  @param year, the value of year to check
-	 */
-	
 	Utility.leapYear(year);
 	
 	}
