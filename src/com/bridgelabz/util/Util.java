@@ -71,5 +71,53 @@ public class Util
 			}
 			
 		}
+
+		/**
+		 * Function to check given prime number is palindrome or not 
+		 */
+		
+		public static void PrimeNumberValidation()
+		{
+			
+			
+			for(int i=2;i<=1000;i++)
+			{
+				boolean flag=true;
+				
+				for(int j=2;j<i-1;j++)
+				{
+					if(i%j==0)
+					{
+						flag=false;
+						break;
+					}
+				}
+				
+				if(flag==true)
+				{
+					int temp=i;
+					int rem=0,rev = 0;
+					
+					while(temp!=0)
+					{
+						rem=temp%10;
+						rev=rev*10+rem;
+						temp=temp/10;
+					}
+					
+					if(rev==i)
+					{
+						System.out.println(i+ " The number is palindrome number");
+					}
+					else
+					{
+						System.out.println(i+ " The number is not palindrome number");
+					}
+				}
+			}
+			
+			
+		}
 		
 }
+
