@@ -11,6 +11,11 @@ import java.util.Scanner;
 
 public class Util 
 {
+	/**
+	 * Function to check strings are anagram or not
+	 * @param str1, String value for check
+	 * @param str2, String value for check
+	 */
 	 
 	public static void StringAnagram(String str1,String str2)
 	{
@@ -42,4 +47,29 @@ public class Util
 		}
 	}
 
+		/**
+		 * function to print prime number from 1 to 1000
+		 */
+		public static void primenumber()
+		{
+			for(int i=2;i<=1000;i++)
+			{
+				boolean flag=true;
+				
+				for(int j=2;j<=i-1;j++)
+				{
+					if(i%j==0)
+					{
+						flag=false;
+						break;
+					}
+				}
+				if(flag==true)
+				{
+					System.out.println(i);
+				}
+			}
+			
+		}
+		
 }
