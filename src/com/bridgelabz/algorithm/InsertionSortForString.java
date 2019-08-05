@@ -9,7 +9,7 @@ import com.bridgelabz.utility.Utility;
  * @version 1.8
  */
 
-public class IsertionSortForString {
+public class InsertionSortForString {
 
 	public static void main(String[] args) {
 		
