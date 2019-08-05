@@ -215,7 +215,34 @@ public class Utility
 		}
 		
 	}
-	
+
+	/**
+	 * To find prime factor of given number and print it
+	 * @param n, the no for which to find the prime factors
+	 */
+	public static void primeFactors(int n) 
+    { 
+       
+        while (n%2==0) 
+        { 
+            System.out.print(2 + " "); 
+            n /= 2; 
+        } 
+  
+  
+        for (int i = 3; i <= Math.sqrt(n); i+= 2) 
+        { 
+            // While i divides n, print i and divide n 
+            while (n%i == 0) 
+            { 
+                System.out.print(i + " "); 
+                n /= i; 
+            } 
+        } 
+  
+        if (n > 2) 
+            System.out.print(n); 
+    } 
 	
 	/**
 	 * Function to find the three element whose sum is equal to zero
