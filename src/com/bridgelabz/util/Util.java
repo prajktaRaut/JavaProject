@@ -119,5 +119,46 @@ public class Util
 			
 		}
 		
+		/**
+		 * Function to sort integer array using binary search algorithm 
+		 */
+		
+		
+		public static void BinarySearchInteger()
+		{
+			
+			int[] arr= {11,22,33,44,55,66,77};
+			
+			int start=0;
+			int end = arr.length-1;
+			int middle=(start + end)/2;
+			int item=55;
+			
+			while(start<=end)
+			{
+				if(arr[middle]==item)
+				{
+					System.out.println("Item is found at index "+middle);
+					break;
+				}
+				else if(item>arr[middle])
+				{
+					start=middle+1;
+				}
+				else if(item<arr[middle])
+				{
+					end= middle-1;
+				}
+				middle = (start + end)/2;  	
+				
+			}
+			
+			if(start>end)
+			{
+			System.out.println("Item not found");	
+			}
+			
+		}
+		
 }
 
