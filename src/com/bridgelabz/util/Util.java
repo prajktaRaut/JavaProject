@@ -122,8 +122,7 @@ public class Util
 		/**
 		 * Function to sort integer array using binary search algorithm 
 		 */
-		
-		
+
 		public static void BinarySearchInteger()
 		{
 			
@@ -158,6 +157,45 @@ public class Util
 			System.out.println("Item not found");	
 			}
 			
+		}
+		
+		/**
+		 * Function to sort String array using binary search algorithm
+		 * @param s, the array in which element to be searched
+		 * @param item, the string element which needs to be searched
+		 * @return -1 if not found or the index of element if found
+		 */	
+		
+		public static int BinarySearchForString(String[] s, String item)
+		{
+
+			 int start=0;
+			 int end= s.length-1;
+			 
+			 
+			 while(start<=end)
+			 {
+				 int middle= (start + end)/2;
+				 	
+				 int res=item.compareTo(s[middle]);
+				 
+				 if(res==0)
+				 {
+					 return middle;
+				 }
+				 
+				 else if(res>0)
+				 {
+					 start=middle + 1;
+
+				 }
+				 else 
+				 {
+					 end=middle - 1;
+					 
+				 }
+			 }
+			return -1;
 		}
 		
 }
