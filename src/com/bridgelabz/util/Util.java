@@ -291,6 +291,38 @@ public class Util
 			
 		}
 		
+		/**
+		 * Function to sort String array implementing bubble sort algorithm
+		 * 
+		 */
+		public static void BubbleSortForString() 
+		{
+			String[] a= {"java","c","angular","spring","hibernate"};
+			
+			String temp="";
+			
+			for(int j=0;j<a.length;j++)
+			{
+
+				
+				for(int i=j+1;i<a.length;i++)
+				{
+					if(a[i].compareTo(a[j])<0)
+					{
+						temp=a[j];
+						a[j]=a[i];
+						a[i]= temp;
+						
+					}
+					
+				}
+				
+				System.out.println(a[j]);
+			}
+			
+		}
+
+
 
 		
 }
