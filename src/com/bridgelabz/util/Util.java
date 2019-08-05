@@ -226,6 +226,33 @@ public class Util
 
 		}
 			
+	
+		/**
+		* Function to sort  String array using insertion sort
+		* @param arr the array which needs to be sorted
+		*/
+
+			public static void InsertionSortForString(String[] arr)
+			{
+				for(int i=0;i<arr.length;++i)
+				{
+					String key=arr[i];
+					int j=i-1;
+					
+					while(j>=0 && arr[j].compareTo(key)>0)
+					{
+						arr[j+1]=arr[j];
+						j=j-1;
+						
+					}
+					arr[j+1]=key;
+				}
+				for(int i=0;i<arr.length;i++)
+				{
+					System.out.print(arr[i] + " ");
+				}
+			}
+
 
 		
 }
