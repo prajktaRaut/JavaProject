@@ -22,9 +22,26 @@ public class BinarySearchForString {
         
 		String[] s1= {"angular","c","java","net","python"};
 		
-		String i="c++";
+		for (int i=0;i<s1.length;i++) {
+			System.out.print(s1[i]+" ");
+		}
 		
-		u.BinarySearchForString(s1, i);
+		System.out.println();
+		
+		System.out.println("enter the string for search");
+		
+		String s=Utility.stringValue();
+		
+		int result=u.BinarySearchForString(s1, s);
+		
+		if(result==-1)
+		{
+			System.out.println("element not found");
+		}
+		else
+		{
+			System.out.println("element found at index "+result);
+		}
 		
 		System.out.println("enter 1 to stop the stopwatch");
 		

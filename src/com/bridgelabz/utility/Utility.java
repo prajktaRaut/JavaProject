@@ -1,5 +1,9 @@
 package com.bridgelabz.utility;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -12,6 +16,8 @@ public class Utility
 {
 	
 	static Scanner scanner= new Scanner(System.in);
+	static InputStreamReader reader= new InputStreamReader(System.in);
+	static BufferedReader read= new BufferedReader(reader);
 	
 	
 	public static int integerValue()
@@ -23,6 +29,7 @@ public class Utility
 	
 	public static String stringValue()
 	{
+		
 		String string = scanner.nextLine();
 		return string;
 	}
@@ -47,6 +54,26 @@ public class Utility
 		double doublevalue= scanner.nextInt();
 		return doublevalue;
 	}
+	
+
+	public static boolean booleanValue()
+	{
+		boolean booleanValue= scanner.nextBoolean();
+		return booleanValue;
+	}
+	
+	public static String bufferStringValue() throws IOException
+	{
+		String str= read.readLine();
+		return str;
+	}
+	
+	public static long longValue()
+	{
+		long longValue= scanner.nextLong();
+		return longValue;
+	}
+	
 	
 	
 	/**
@@ -125,8 +152,9 @@ public class Utility
 	 *  @param year, the value of year to check
 	 */
 	
-	public static void leapYear(int year)
+	public static boolean leapYear(int year)
 	{
+		boolean flag=true;
 		
 		// Here, we check the year is between 1000 and 10000 or not
 		if(year>=1000 && year<=10000)
@@ -137,28 +165,29 @@ public class Utility
 			{
 				if(year%400==0)
 				{
-					System.out.println("The given year is leap Year");
+				flag=true;
 				}
 				else
 				{
-					System.out.println("The given year is not leap year");
+					flag=false;
 				}
 				
 			}
 			else
 			{
-				System.out.println(" The given year is leap Year");
+				flag=true;
 			}
 		}
 		else
 		{
-			System.out.println("The given year is not leap year");
+			flag=false;
 		}
 		}
 		else
 		{
 			System.out.println("enter the proper year");
 		}
+		return flag;
 		
 		}
 	
@@ -457,5 +486,151 @@ public class Utility
 		return ElapsedTime;
 	}
 	
+	/** Function to count and print currency notes 
+	 * 
+	 * @param amount, value for which we have to find currency notes
+	 */
+    public static void countCurrency(int amount) 
+    { 
+        int[] notes = new int[]{ 2000, 500, 200, 100, 50, 20, 10, 5, 1 }; 
+        int[] noteCounter = new int[9]; 
+       
+        // count notes
+        for (int i = 0; i < 9; i++) { 
+            if (amount >= notes[i]) { 
+                noteCounter[i] = amount / notes[i]; 
+                amount = amount - noteCounter[i] * notes[i]; 
+            } 
+        } 
+       
+        // Print notes 
+        System.out.println("Currency Count ->"); 
+        for (int i = 0; i < 9; i++) { 
+            if (noteCounter[i] != 0) { 
+                System.out.println(notes[i] + " : "
+                    + noteCounter[i]); 
+            } 
+        } 
+    } 
+    
+    /**
+     * Function to simulate gambler
+     * @param stake, the amount which you have
+     * @param goal, the value which to reach to win the gamble
+     * @param trials, number of trials to perform
+     */
+    
+    public static void findgambler(int stake,int goal,int trials)
+    {
+		int bets = 0; // total number of bets made
+		int wins = 0; // total number of games won
+
+		// repeat trials times
+		for (int t = 0; t < trials; t++) {
+
+			// do one gambler's ruin simulation
+			int cash = stake;
+			while (cash > 0 && cash < goal) {
+				bets++;
+				if (Math.random() < 0.5)
+					cash++; // win $1
+				else
+					cash--; // lose $1
+			}
+			if (cash == goal)
+				wins++; // did gambler go achieve desired goal?
+		}
+
+		// print results
+		System.out.println(wins + " wins of " + trials);
+		System.out.println("Percent of games won = " + 100.0 * wins / trials);
+		System.out.println("Avg # bets           = " + 1.0 * bets / trials);
+    }
+ 
+    
+    public static void integerArray(int row, int column)
+	{
+		int[][] arr= new int[row][column];
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				arr[i][j]=Utility.integerValue();
+			}
+			
+		}
+		
+		PrintWriter pw= new PrintWriter(System.out);
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				pw.print(arr[i][j]+" ");
+			}
+			pw.println();
+		}
+		
+		
+		pw.close();
+	}
+    
+    public static void doubleArray(int row, int column)
+	{
+		double[][] arr= new double[row][column];
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				arr[i][j]=Utility.doubleValue();
+			}
+			
+		}
+		
+		PrintWriter pw= new PrintWriter(System.out);
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				pw.print((double)arr[i][j]);
+			}
+			pw.println();
+		}
+		
+		
+		pw.close();
+	}
+    
+    public static void booleanArray(int row, int column)
+	{
+		boolean[][] arr= new boolean[row][column];
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				arr[i][j]=Utility.booleanValue();
+			}
+			
+		}
+		
+		PrintWriter pw= new PrintWriter(System.out);
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++)
+			{
+				pw.print(arr[i][j]+" ");
+			}
+			pw.println();
+		}
+		
+		
+		pw.close();
+	}
+    
 }
 

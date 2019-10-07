@@ -17,7 +17,7 @@ public class Util
 	 * @param str2, String value for check
 	 */
 	 
-	public static void StringAnagram(String str1,String str2)
+	public static boolean StringAnagram(String str1,String str2)
 	{
 		
 		boolean flag=true;
@@ -36,15 +36,9 @@ public class Util
 			
 			flag=Arrays.equals(s1, s2);
 			
-			if(flag==true)
-			{
-				System.out.println("Strings are anagram ");
-			}
-			else
-			{
-				System.out.println("Strings are not anagram");
-			}
+
 		}
+		return flag;
 	}
 
 		/**
@@ -322,7 +316,138 @@ public class Util
 			
 		}
 
+		public static int dayofweek(int d,int m,int y)
+		{
+			int y0=y - (14 - m)/12;
+			int x= y0 + y0/4 - y0/100 + y0/400;
+			int m0=m + 12 * ((14-m)/12) - 2;
+			int d0=(d + x + (31*m0)/12) % 7;
+			return d0;
+			
+		}
 
+		public static int temperatureconversion(int temp, char t)
+		{
+			int convertTemp=0;
+			
+			if(t=='c' || t=='C')
+			{
+				convertTemp = (temp * 9/5)+32;
+										
+			}
+			else if(t=='f' && t=='F')
+			{
+				convertTemp = (temp-32)*5/9;
+			}
+			else
+			{
+				System.out.println("enter proper input");
+				return 0;
+			}
+			
+			return convertTemp;
+		}
+		
+		public static double monthlyPayment(double p,double r,double y)
+		{
+			double payment=0;
+			
+			double n= 12 *y;
+			
+			double r0= r / (12 * 100);
+			
+			payment= p*r0 / (1-Math.pow((1+r0), -n));
+			
+			return payment; 
+		}
+		
+		public static double squareRoot(double n)
+		{
+			double t=n;
+			
+			double epsilon=1e-15;
+			
+			while(Math.abs(t - n/t) > epsilon*t)
+			{
+				t=(n/t + t)/2;
+			}
+			
+			
+			return t;
+		}
+		
+		public static String toBinary(int  s)
+		{
+			int temp=s;
+			int index=0;
+			int[] rem= new int[20];
+			String str="";
+			
+			while(temp!=0)
+			{
+				rem[index]=temp%2;
+				index++;
+				temp=temp/2;
+			}
+			
+			for(int i=index-1;i>=0;i--)
+			{
+				str=str+rem[i];
+			
+			}
+			return str;
+		
+		}
+
+			
+			public static int[] tobinary(int d) 
+			{
+				int[] rem=new int[20];
+				
+				int index=0;
+
+				String bin ="" ;
+				
+				while (d != 0) 
+				{
+					
+					bin = d%2 + bin;
+
+					d=d/2;
+					
+				}
+				
+				while (bin.length() % 4 != 0) 
+				{
+					bin = 0 + bin;
+				}
+				
+				return stringToIntArray(bin);
+			}
+			
+		
+		public static int[] stringToIntArray(String bin) 
+		{
+			int[] binary = new int[bin.length()];
+			
+			for (int i = 0; i < binary.length; i++) 
+			{
+				binary[i] = bin.charAt(i) - 48;
+			}
+			
+			return binary;
+		}
+		
+		public static int toDecimal(int[] binary) {
+			int dec = 0, j = 0;
+			for (int i = binary.length - 1; i >= 0; i--) {
+				if (binary[i] == 1) {
+					dec = dec + (int) Math.pow(2, j);
+				}
+				j++;
+			}
+			return dec;
+		}
 
 		
 }

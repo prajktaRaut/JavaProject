@@ -25,7 +25,17 @@ public class Anagram {
 		
 		Util U = new Util();
 		
-		U.StringAnagram(str1,str2);
+		
+		
+		
+		if (U.StringAnagram(str1,str2))
+		{
+			System.out.println("Strings are anagram ");
+		}
+		else 
+		{
+			System.out.println("Strings are not anagram");
+		}
 		
 	}
 	

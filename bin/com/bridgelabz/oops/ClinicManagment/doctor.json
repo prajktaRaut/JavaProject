@@ -1,0 +1,38 @@
+[
+  {
+    "doctor_id": 102,
+    "doctor_name": "ddd",
+    "doctor_specialization": "vvvv",
+    "doctor_availability": "hjjij"
+  },
+  {
+    "doctor_id": 102,
+    "doctor_name": "avd",
+    "doctor_specialization": "bvgfgfb",
+    "doctor_availability": "gggbh"
+  },
+  {
+    "doctor_id": 104,
+    "doctor_name": "bhjhjj",
+    "doctor_specialization": "hjuhj",
+    "doctor_availability": "hjhj"
+  },
+  {
+    "doctor_id": 105,
+    "doctor_name": "patil",
+    "doctor_specialization": "dde",
+    "doctor_availability": "fff"
+  },
+  {
+    "doctor_id": 107,
+    "doctor_name": "bacv",
+    "doctor_specialization": "hgyg",
+    "doctor_availability": "huhuyh"
+  },
+  {
+    "doctor_id": 106,
+    "doctor_name": "def",
+    "doctor_specialization": "sjjkl",
+    "doctor_availability": "9 1m"
+  }
+]

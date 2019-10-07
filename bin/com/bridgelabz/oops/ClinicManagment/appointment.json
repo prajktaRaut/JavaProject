@@ -1,0 +1,26 @@
+[
+  {
+    "patient_name": "pari",
+    "doctor_name": "joshi",
+    "time": "10 am",
+    "date": "13-9-19"
+  },
+  {
+    "patient_name": "ujwala",
+    "doctor_name": "patil",
+    "time": "9 am",
+    "date": "12-9-19"
+  },
+  {
+    "patient_name": "pihu",
+    "doctor_name": "joshi",
+    "time": "9 am",
+    "date": "12-9-19"
+  },
+  {
+    "patient_name": "abc",
+    "doctor_name": "patil",
+    "time": "1 pm",
+    "date": "12-9-19"
+  }
+]
